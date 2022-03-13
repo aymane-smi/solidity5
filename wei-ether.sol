@@ -10,7 +10,7 @@ contract wei_ether{
         return 1 wei == 1;
     }
 
-    functiontestOneEther() public pure returns(bool){
-        return 1 ether == 1e18 wei;
+    function testOneEther() public pure returns(bool){
+        return 1 ether == 1e18 wei; 
     }
 }
