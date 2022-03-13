@@ -1,0 +1,29 @@
+//PSDX-License-Identifier: MIT
+
+pragma solidity ^0.5.11;
+
+contract X{
+    string public name;
+    constructor(string memory _name) public{
+        name = _name;
+    }
+}
+
+contract Y{
+    string public text;
+    constructor(string memory _text) public{
+        text = _text;
+    }
+}
+
+contract A is X("Name Input for A"), Y("Text Inpt for B"){
+
+}
+
+contract B is X, Y{
+    constructor() X("Name Input for A") Y("Text Input for B") public {}
+}
+
+contract C is X, Y{
+    constructor(string memory _name, string memory _text) X(_name) Y(_text) public {};
+}
