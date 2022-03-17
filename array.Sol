@@ -38,7 +38,7 @@ contract compactArray{
         Array.push(3);
         Array.push(4);
 
-        remove(2);
+        remove(1);
 
         assert(Array.length == 3);
         assert(Array[0] == 1);
